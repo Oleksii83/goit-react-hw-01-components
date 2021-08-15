@@ -9,6 +9,7 @@
 
 //                         title="Upload stats"
 //                         stats={item.percentage}
+//                         label={item.label}
 //                     />
 //                 </li>
 //             ))}

@@ -1,5 +1,4 @@
-export default function TransactionHistory(props) {
-  const { type, amount, currency } = props;
+const TransactionHistory = ({ items }) => {
   return (
     <table className="transaction-history">
       <thead>
@@ -11,12 +10,16 @@ export default function TransactionHistory(props) {
       </thead>
 
       <tbody>
-        <tr>
-          <td>{type}</td>
-          <td>{amount}</td>
-          <td>{currency}</td>
-        </tr>
+        {items.map((item) => (
+          <tr key={item.id}>
+            <td>{item.type}</td>
+            <td>{item.amount}</td>
+            <td>{item.currency}</td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );
-}
+};
+
+export default TransactionHistory;
