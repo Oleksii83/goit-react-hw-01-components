@@ -1,0 +1,31 @@
+.transaction-history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 12%), 0 4px 4px rgb(0 0 0 / 6%),
+    1px 4px 6px rgb(0 0 0 / 16%);
+}
+.description {
+  background-color: #00bdd6;
+  color: #fff;
+}
+
+.row {
+  width: 150px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.itemRow {
+  color: #1f3247;
+}
+
+.itemRow:nth-child(2n) {
+  background: #ecf1f4;
+}
+
+.rowLine {
+  text-align: center;
+  width: 150px;
+}
