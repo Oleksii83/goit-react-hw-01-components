@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "./Statistics.style.css";
 export default function Statistics(props) {
   const { stats, title } = props;
@@ -16,3 +17,8 @@ export default function Statistics(props) {
     </section>
   );
 }
+
+Statistics.propTypes = {
+  stats: PropTypes.string,
+  title: PropTypes.string,
+};

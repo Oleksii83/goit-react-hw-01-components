@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "./Profile.style.css";
 export default function Profile(props) {
   return (
@@ -31,3 +32,13 @@ export default function Profile(props) {
     </div>
   );
 }
+
+Profile.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  followers: PropTypes.string,
+  views: PropTypes.string,
+  likes: PropTypes.string,
+};
