@@ -1,14 +1,26 @@
 import PropTypes from "prop-types";
 import "./FriendList.style.css";
 // import s from "./FriendList.style.css"
-export default function FriendList(props) {
-  const { avatar, name, isOnline } = props;
+export default function FriendList({ friends }) {
   return (
-    <li className="Friend-item">
-      {isOnline ? <span className="online" /> : <span className="offline" />}
-      <img className="Friend-avatar" src={avatar} alt={name} width="48" />
-      <p className="Friend-name">{name}</p>
-    </li>
+    <ul className="Friends-list">
+      {friends.map((item) => (
+        <li key={item.id} className="Friend-item">
+          {item.isOnline ? (
+            <span className="online" />
+          ) : (
+            <span className="offline" />
+          )}
+          <img
+            className="Friend-avatar"
+            src={item.avatar}
+            alt={item.name}
+            width="48"
+          />
+          <p className="Friend-name">{item.name}</p>
+        </li>
+      ))}
+    </ul>
   );
 }
 

@@ -4,7 +4,7 @@ export default function Statistics(props) {
   const { stats, title } = props;
   return (
     <section className="statistics">
-      <h2 className="Stat-title">{title}</h2>
+      {title && <h2 className="Stat-title">{title}</h2>}
 
       <ul className="stat-list">
         {stats.map((item) => (
@@ -19,6 +19,12 @@ export default function Statistics(props) {
 }
 
 Statistics.propTypes = {
-  stats: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ),
   title: PropTypes.string,
 };
