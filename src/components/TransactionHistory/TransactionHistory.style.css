@@ -5,6 +5,7 @@
   border-radius: 5px;
   box-shadow: 0 1px 1px rgb(0 0 0 / 12%), 0 4px 4px rgb(0 0 0 / 6%),
     1px 4px 6px rgb(0 0 0 / 16%);
+  padding-bottom: 50px;
 }
 .description {
   background-color: #00bdd6;
