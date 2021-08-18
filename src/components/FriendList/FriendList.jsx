@@ -8,13 +8,11 @@ export default function FriendList({ friends }) {
   return (
     <ul className={s.FriendsList}>
       {friends.map((item) => (
-        <li key={item.id} className={s.FriendItem}>
-          <FriendItem
-            avatar={item.avatar}
-            name={item.name}
-            isOnline={item.isOnline}
-          />
-        </li>
+        <FriendItem
+          avatar={item.avatar}
+          name={item.name}
+          isOnline={item.isOnline}
+        />
       ))}
     </ul>
   );
